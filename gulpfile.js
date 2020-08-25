@@ -62,9 +62,11 @@ function defaultTask(cb) {
 
     httpServer.listen(8080, function() {
     console.log("Listening on port 8080");
-    exit(0);
+    exit(0); // remove this line
     });
 
+
+    
     /* httpsServer.listen(443, function() {
     console.log("Listening on port 443");
     }); */
@@ -207,7 +209,7 @@ function defaultTask(cb) {
         .then(info => {
             if (!info.username && req.query.error) return res.status(400).json({status: "err", message: req.query.error_description});
             if (!info.username) return res.status(400).json({status: "err"});
-            fetch(`https://api-v2.emeraldsys.xyz/v1/users/discordget?discord=${info.id}`, {
+            fetch(`removed for privacy`, { // your own database api link here
                 method: "GET"
             })
             .then(res4 => res4.json())
