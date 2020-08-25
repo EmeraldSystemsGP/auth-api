@@ -39,20 +39,20 @@ paypal.notification.webhook.create(webhooks, function (err, webhook) {
 const discord = require("discord.js");
 const bot = new discord.Client({disableEveryone: true});
 
-var certificate = fs.readFileSync(__dirname + "/ssl/cert1.pem");
-var priv = fs.readFileSync(__dirname + "/ssl/privkey1.pem");
-var auth = fs.readFileSync(__dirname + "/ssl/chain1.pem");
+//var certificate = fs.readFileSync(__dirname + "/ssl/cert1.pem");
+//var priv = fs.readFileSync(__dirname + "/ssl/privkey1.pem");
+//var auth = fs.readFileSync(__dirname + "/ssl/chain1.pem");
 
 var httpServer = http.createServer(app);
-var httpsServer = https.createServer({
+/* var httpsServer = https.createServer({
 key: priv,
 cert: certificate,
 ca: auth
-}, app);
+}, app); */
 
-app.use(hsts({
+/* app.use(hsts({
   maxAge: 15552000
-}));
+})); */
 
 app.use(express.json())
 app.set("view engine", "ejs")
@@ -61,9 +61,9 @@ httpServer.listen(80, function() {
 console.log("Listening on port 80");
 });
 
-httpsServer.listen(443, function() {
+/* httpsServer.listen(443, function() {
 console.log("Listening on port 443");
-});
+}); */
 
 bot.on("ready", () => {
 
