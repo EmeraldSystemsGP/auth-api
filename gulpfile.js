@@ -62,7 +62,7 @@ function defaultTask(cb) {
 
     httpServer.listen(8080, function() {
     console.log("Listening on port 8080");
-    exit(0); // remove this line
+    exit(0); // remove this line when using
     });
 
 
