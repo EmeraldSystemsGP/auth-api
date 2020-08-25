@@ -57,8 +57,8 @@ ca: auth
 app.use(express.json())
 app.set("view engine", "ejs")
 
-httpServer.listen(80, function() {
-console.log("Listening on port 80");
+httpServer.listen(8080, function() {
+console.log("Listening on port 8080");
 });
 
 /* httpsServer.listen(443, function() {
