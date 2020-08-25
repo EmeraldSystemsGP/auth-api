@@ -1,3 +1,5 @@
+const { exit } = require("process");
+
 function defaultTask(cb) {
     const express = require("express");
     const app = express();
@@ -60,6 +62,7 @@ function defaultTask(cb) {
 
     httpServer.listen(8080, function() {
     console.log("Listening on port 8080");
+    exit(0);
     });
 
     /* httpsServer.listen(443, function() {
