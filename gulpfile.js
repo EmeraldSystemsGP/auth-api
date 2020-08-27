@@ -1,3 +1,6 @@
+// gulp file for using tasks
+// u can put this in a regular js file
+
 const { exit } = require("process");
 
 function defaultTask(cb) {
