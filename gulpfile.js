@@ -75,7 +75,7 @@ function defaultTask(cb) {
     }); */
 
     bot.on("ready", () => {
-
+    console.log("Ready");
     });
 
     bot.on("message", async (message) => {
